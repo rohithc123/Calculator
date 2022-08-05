@@ -1,0 +1,19 @@
+/* .container{
+
+} */
+
+.align_items {
+  margin: auto;
+  width: 200px;
+  height: 700px;
+  display: block;
+}
+
+.button_align {
+  border-radius: 50%;
+  text-align: center;
+  border: none;
+  display: inline-block;
+  padding: 100px 20px;
+  font-size: 10px;
+}
