@@ -1,6 +1,7 @@
 var print = "",
   num = "",
   operator = "";
+var flag = 0;
 
 function getValue(item) {
   num = item;
@@ -12,7 +13,7 @@ function getOperator(item) {
 
 document.querySelectorAll(".number").forEach((item) => {
   item.addEventListener("click", () => {
-    if (!print) print = "";
+    if (!print || flag) (print = ""), (flag = 0);
     print += num;
     document.getElementById("result").innerHTML = print;
   });
@@ -20,6 +21,7 @@ document.querySelectorAll(".number").forEach((item) => {
 
 document.querySelectorAll(".operator").forEach((item) => {
   item.addEventListener("click", () => {
+    flag = 0;
     print += " ";
     print += operator;
     print += " ";
@@ -42,19 +44,20 @@ function calculate() {
   let num2 = arr[2];
   switch (operator) {
     case "+":
-      print = parseInt(num1) + parseInt(num2);
+      print = parseFloat(num1) + parseFloat(num2);
       break;
     case "-":
-      print = parseInt(num1) - parseInt(num2);
+      print = parseFloat(num1) - parseFloat(num2);
       break;
     case "*":
-      print = parseInt(num1) * parseInt(num2);
+      print = parseFloat(num1) * parseFloat(num2);
       break;
     case "/":
-      print = parseInt(num1) / parseInt(num2);
+      print = parseFloat(num1) / parseFloat(num2);
+      print = print.toFixed(5);
       break;
     case "%":
-      print = parseInt(num1) % parseInt(num2);
+      print = parseFloat(num1) % parseFloat(num2);
       break;
   }
 
@@ -64,5 +67,7 @@ function calculate() {
 document.getElementById("btn_equal").addEventListener("click", () => {
   print = calculate();
   operator = "";
+
   document.getElementById("result").innerHTML = print;
+  flag = 1;
 });

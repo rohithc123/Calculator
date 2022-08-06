@@ -2,19 +2,27 @@
 <html>
   <head>
     <link rel="stylesheet" href="/index.css" />
-
-    <title>Calculator</title>
+    <link rel="icon" href="/Calculator-icon.png"/>
+    <title class="heading">Calculator</title>
   </head>
   <body>
+    <div class="description">
+    <h1 class="heading">Calculator</h1>
+    <p class="content">A simple Calculator web application developed using HTML,CSS and JavaScript.</p>
+
+    </div>
     <div class="container">
       <div class="align_items">
-        <h1 id="result">Result</h1>
+        
+      <h1 id="result">Result</h1>
+
         <div class="button_align">
-          <button id="btn_plain1"></button>
-          <button value="%" class="operator" onclick="getOperator(this.value)">
+          <button id="btn_ac">AC</button>
+          <button id="btn_dot" class="number" value="." onclick="getValue(this.value)"">.</button>
+
+          <button id='modulus'value="%" class="operator" onclick="getOperator(this.value)">
             %
           </button>
-          <button id="btn_ac">AC</button>
           <button value="/" class="operator" onclick="getOperator(this.value)"">/</button>
           <button
             class="number"
@@ -29,6 +37,9 @@
           <button class="number" value="9" onclick="getValue(this.value)">
             9
           </button>
+          <button value="*" class="operator" onclick="getOperator(this.value)">
+            ×
+          </button>
           <button class="number" value="4" onclick="getValue(this.value)">
             4
           </button>
@@ -37,6 +48,9 @@
           </button>
           <button class="number" value="6" onclick="getValue(this.value)">
             6
+          </button>
+          <button value="+" class="operator" onclick="getOperator(this.value)">
+            +
           </button>
           <button class="number" value="1" onclick="getValue(this.value)">
             1
@@ -47,21 +61,17 @@
           <button class="number" value="3" onclick="getValue(this.value)">
             3
           </button>
-          <button class="number" value="0" onclick="getValue(this.value)">
-            0
-          </button>
-          <button value="+" class="operator" onclick="getOperator(this.value)">
-            +
-          </button>
           <button value="-" class="operator" onclick="getOperator(this.value)">
             -
           </button>
-          <button id="btn_plain1"></button>
 
-          <button value="*" class="operator" onclick="getOperator(this.value)">
-            *
+          <button id="long_size"class="number" value="0" onclick="getValue(this.value)">
+            0
           </button>
-          <button id="btn_dot">.</button>
+        
+          
+
+         
           <button id="btn_equal">=</button>
         </div>
       </div>
