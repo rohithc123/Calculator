@@ -2,13 +2,14 @@
 
 body {
   background-color: rgb(2, 215, 137);
+  overflow-y: hidden;
 }
 .description {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  margin-top: 300px;
-  margin-left: 250px;
-  margin-right: 850px;
+  margin-top: 19em;
+  margin-left: 20em;
+  margin-right: 50em;
 }
 
 .heading {
@@ -20,12 +21,12 @@ body {
 }
 .container {
   background-color: rgb(37, 37, 37);
-  margin-top: -250px;
+  margin-top: -15em;
   margin-left: 60em;
   align-items: center;
   justify-content: center;
-  width: 250px;
-  height: 390px;
+  width: 15.6em;
+  height: 24em;
   display: inline-block;
   flex-direction: column;
   border-radius: 10px;
@@ -50,14 +51,14 @@ body {
   font-family: "Poppins", sans-serif;
   color: aliceblue;
   text-align: right;
-  padding-right: 20px;
+  padding-right: 0.7em;
   overflow-x: auto;
 
   /* overflow-y: scroll; */
   /* scrollbar-base-color: aquamarine; */
 }
 #btn_equal {
-  background-color: rgb(2, 215, 137);
+  background-color: #58b9ed;
 }
 /* .button_align {
   border-radius: 50%;
@@ -92,7 +93,7 @@ button:hover {
   background-color: rgb(207, 248, 235);
 }
 #btn_equal:hover {
-  background-color: rgb(3, 194, 133);
+  background-color: rgb(80, 220, 255);
 }
 
 ::-webkit-scrollbar {
@@ -111,4 +112,18 @@ button:hover {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(4, 169, 108);
+}
+.circle {
+  margin-left: -12em;
+  height: 120rem;
+  width: 120rem;
+  border-radius: 50% 50% 0 0;
+  background-color: #48abe0;
+}
+.credits {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.75em;
+  font-weight: 600;
+  margin-top: -1800px;
+  margin-left: 700px;
 }

@@ -13,7 +13,7 @@ function getOperator(item) {
 
 document.querySelectorAll(".number").forEach((item) => {
   item.addEventListener("click", () => {
-    if (!print || flag) (print = ""), (flag = 0);
+    if (!print || flag || print === "Enter") (print = ""), (flag = 0);
     print += num;
     document.getElementById("result").innerHTML = print;
   });
@@ -25,6 +25,11 @@ document.querySelectorAll(".operator").forEach((item) => {
     print += " ";
     print += operator;
     print += " ";
+    if (print.startsWith("Enter")) {
+      print = "";
+      print += operator;
+      print += " ";
+    }
 
     document.getElementById("result").innerHTML = print;
   });
@@ -32,7 +37,7 @@ document.querySelectorAll(".operator").forEach((item) => {
 
 document.getElementById("btn_ac").addEventListener("click", () => {
   console.log("ac clicked");
-  print = "";
+  print = "Enter";
   document.getElementById("result").innerHTML = print;
 });
 
